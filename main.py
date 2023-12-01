@@ -1,6 +1,6 @@
 welcome_prompt = "Hello! What would you like to do today?\n - List all patients, press 1\n - To run a new diagnosis, press 2\n - To quit, press q\n"
 name_prompt = "What is the patient's name?\n"
-appearance_prompt = "How is the patient's general appearance?\n - 1: Normal appearance \n -2: Irritable or lethargic\n"
+appearance_prompt = "How is the patient's general appearance?\n - 1: Normal appearance \n - 2: Irritable or lethargic\n"
 
 eye_prompt = "How are the patient's eyes?\n - 1: Eyes normal or slightly sunken\n - 2: Eyes very sunken\n"
 severe_dehydration = "Severe dehydration"
