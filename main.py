@@ -8,12 +8,13 @@ def start_diagnosis ():
 
 
 def main ():
-    selection = input(welcome_prompt)
-    if selection == "1":
-        list_patients()
-    elif selection == "2":
-        start_diagnosis()
-    elif selection == "q":
-        return
-  
+    while(True):
+        selection = input(welcome_prompt)
+        if selection == "1":
+            list_patients()
+        elif selection == "2":
+            start_diagnosis()
+        elif selection == "q":
+            return
+    
 main()
