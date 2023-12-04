@@ -31,8 +31,11 @@ def assess_eyes():
     elif eyes == "2":
         return severe_dehydration
     
-def assess_skin():
-    print("Assessing skin appearance")    
+def assess_skin(skin):
+    if skin == "1":
+        return some_dehydration
+    elif skin == "2":
+        return severe_dehydration
     
 def assess_appearance():
     appearance = input(appearance_prompt)
@@ -40,7 +43,8 @@ def assess_appearance():
         diagnosis = assess_eyes()
         print(diagnosis)
     elif appearance == "2":
-        assess_skin()
+        skin = input(skin_prompt)
+        return assess_skin(skin)
     
 def start_diagnosis ():
     name = input(name_prompt)
