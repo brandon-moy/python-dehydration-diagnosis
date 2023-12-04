@@ -3,12 +3,25 @@ name_prompt = "What is the patient's name?\n"
 appearance_prompt = "How is the patient's general appearance?\n - 1: Normal appearance \n - 2: Irritable or lethargic\n"
 
 eye_prompt = "How are the patient's eyes?\n - 1: Eyes normal or slightly sunken\n - 2: Eyes very sunken\n"
+skin_prompt = "How is the patient's skin when you pinch it?\n - 1: Normal skin pinch\n - 2: Slow skin pinch\n"
+
 severe_dehydration = "Severe dehydration"
 some_dehydration = "Some dehydration"
 no_dehydration = "No dehydration"
 
+patients_and_diagnoses = [
+    "Mike - Severe dehydration",
+    "Sally - No dehydration",
+    "Kate - Some dehydration"
+]
+
 def list_patients ():
     print("List of patients and diagnoses")
+    
+def save_new_diagnosis(name, diagnosis):
+    final_diagnosis = name + " - " + diagnosis
+    patients_and_diagnoses.append(final_diagnosis)
+    print("Final diagnosis:", final_diagnosis, "\n")
 
 def assess_eyes():
     eyes = input(eye_prompt)
