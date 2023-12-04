@@ -16,7 +16,8 @@ patients_and_diagnoses = [
 ]
 
 def list_patients ():
-    print("List of patients and diagnoses")
+    for patient in patients_and_diagnoses:
+        print(patient)
     
 def save_new_diagnosis(name, diagnosis):
     final_diagnosis = name + " - " + diagnosis
