@@ -30,7 +30,8 @@ def assess_appearance():
     
 def start_diagnosis ():
     name = input(name_prompt)
-    assess_appearance()
+    diagnosis = assess_appearance()
+    print(name, diagnosis)
 
 def main ():
     while(True):
