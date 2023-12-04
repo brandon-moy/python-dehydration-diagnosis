@@ -29,8 +29,7 @@ def save_new_diagnosis(name, diagnosis):
     patients_and_diagnoses.append(final_diagnosis)
     print("Final diagnosis:", final_diagnosis, "\n")
 
-def assess_eyes():
-    eyes = input(eye_prompt)
+def assess_eyes(eyes):
     if eyes == "1":
         return no_dehydration
     elif eyes == "2":
@@ -49,8 +48,8 @@ def assess_skin(skin):
 def assess_appearance():
     appearance = input(appearance_prompt)
     if appearance == "1":
-        diagnosis = assess_eyes()
-        print(diagnosis)
+        eyes = input(assess_eyes(eye_prompt))
+        return assess_eyes(eyes)
     elif appearance == "2":
         skin = input(skin_prompt)
         return assess_skin(skin)
@@ -60,7 +59,7 @@ def assess_appearance():
 def start_diagnosis ():
     name = input(name_prompt)
     diagnosis = assess_appearance()
-    print(name, diagnosis)
+    save_new_diagnosis(name, diagnosis)
 
 def main ():
     while(True):
